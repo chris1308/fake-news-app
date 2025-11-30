@@ -1,8 +1,11 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
 from lime.lime_text import LimeTextExplainer
 
+st.write("Current working directory:", os.getcwd())
+st.write("Files present:", os.listdir())
 # ========= Load Model ========= #
 tfidf = pickle.load(open("tfidf.pkl", "rb"))
 model = pickle.load(open("rf_model.pkl", "rb"))
