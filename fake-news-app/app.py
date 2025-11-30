@@ -4,8 +4,8 @@ import numpy as np
 from lime.lime_text import LimeTextExplainer
 
 # ========= Load Model ========= #
-tfidf = pickle.load(open("model/tfidf.pkl", "rb"))
-model = pickle.load(open("model/rf_model.pkl", "rb"))
+tfidf = pickle.load(open("/fake-news-app/model/tfidf.pkl", "rb"))
+model = pickle.load(open("/fake-news-app/model/rf_model.pkl", "rb"))
 
 # Wrapper for LIME → converts text before prediction
 def predict_proba_wrapper(texts):
